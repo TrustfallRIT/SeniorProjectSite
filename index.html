@@ -4,11 +4,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Trust Fall Senior Project</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --accent: #60a5fa;
+            --background: #0f172a;
+            --text: #e2e8f0;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .nav-link {
+            color: var(--text);
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--accent);
+        }
+
+        .card {
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(96, 165, 250, 0.1);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .section-title {
+            color: var(--accent);
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Trust Fall Senior Project Site</h1>
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-opacity-90 bg-gray-900 shadow-lg z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-blue-400">Trust Fall</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#team" class="nav-link">Team</a>
+                    <a href="#project" class="nav-link">Project</a>
+                    <a href="#tracking" class="nav-link">Time Tracking</a>
+                    <a href="#artifacts" class="nav-link">Artifacts</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-24 pb-12 px-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-5xl font-bold mb-4">Trust Fall</h1>
+            <p class="text-xl text-gray-400">[Your Project Tagline Here]</p>
+        </div>
+    </header>
+
+    <!-- Team Section -->
+    <section id="team" class="py-12 px-6">
+        <div class="container mx-auto">
+            <h2 class="section-title text-2xl font-bold">Team & Sponsorship</h2>
+            <div class="grid md:grid-cols-2 gap-8 mt-8">
+                <div class="card p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4">Project Details</h3>
+                    <ul class="space-y-2">
+                        <li><strong>Sponsoring Organization:</strong> [Sponsor Name]</li>
+                        <li><strong>Coach:</strong> [Coach Name]</li>
+                        <li><strong>Project Name:</strong> [Project Name]</li>
+                    </ul>
+                </div>
+                <div class="card p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4">Team Members</h3>
+                    <ul class="space-y-2">
+                        <!-- Add team members and roles here -->
+                        <li>[Name] - [Role]</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Synopsis -->
+    <section id="project" class="py-12 px-6 bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="section-title text-2xl font-bold">Project Synopsis</h2>
+            <div class="card p-6 rounded-lg mt-8">
+                <p class="leading-relaxed">
+                    [Your 250-word project synopsis goes here]
+                </p>
+            </div>
+            <div class="card p-6 rounded-lg mt-8">
+                <h3 class="text-xl font-semibold mb-4">Keywords</h3>
+                <div class="flex flex-wrap gap-2">
+                    <!-- Add your keywords here -->
+                    <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">[Keyword]</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Time Tracking -->
+    <section id="tracking" class="py-12 px-6">
+        <div class="container mx-auto">
+            <h2 class="section-title text-2xl font-bold">Time Tracking</h2>
+            <div class="grid md:grid-cols-2 gap-8 mt-8">
+                <div class="card p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4">Team Progress</h3>
+                    <!-- Add your time tracking visualization here -->
+                    <div class="aspect-w-16 aspect-h-9 bg-gray-800 rounded-lg">
+                        [Your time tracking chart goes here]
+                    </div>
+                </div>
+                <div class="card p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4">Individual Progress</h3>
+                    <!-- Add individual time tracking details here -->
+                    <div class="space-y-4">
+                        [Individual time tracking details]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artifacts -->
+    <section id="artifacts" class="py-12 px-6 bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="section-title text-2xl font-bold">Project Artifacts</h2>
+            <div class="grid md:grid-cols-3 gap-8 mt-8">
+                <div class="card p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4">Development Methodology</h3>
+                    <p>[Your development methodology content]</p>
+                </div>
+                <div class="card p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4">Product/Process Metrics</h3>
+                    <p>[Your metrics content]</p>
+                </div>
+                <div class="card p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4">Domain Model</h3>
+                    <p>[Your domain model content]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 px-6 bg-gray-900">
+        <div class="container mx-auto text-center text-gray-400">
+            <p>&copy; 2025 Trust Fall Senior Project. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 
 </html>
