@@ -70,7 +70,7 @@
     <header class="pt-24 pb-12 px-6">
         <div class="container mx-auto text-center">
             <h1 class="text-5xl font-bold mb-4">Trust Fall</h1>
-            <p class="text-xl text-gray-400">[Your Project Tagline Here]</p>
+            <p class="text-xl text-gray-400">Interview Candidates Efficiently</p>
         </div>
     </header>
 
@@ -82,16 +82,24 @@
                 <div class="card p-6 rounded-lg">
                     <h3 class="text-xl font-semibold mb-4">Project Details</h3>
                     <ul class="space-y-2">
-                        <li><strong>Sponsoring Organization:</strong> [Sponsor Name]</li>
-                        <li><strong>Coach:</strong> [Coach Name]</li>
-                        <li><strong>Project Name:</strong> [Project Name]</li>
+                        <li><strong>Sponsoring Organization:</strong> RIT Co-Op Services</li>
+                        <li><strong>Coach:</strong> Dmitriy Lukyanov</li>
+                        <li><strong>Project Name:</strong> Interview Scheduler</li>
                     </ul>
                 </div>
                 <div class="card p-6 rounded-lg">
-                    <h3 class="text-xl font-semibold mb-4">Team Members</h3>
+                    <h3 class="text-xl font-semibold mb-4">Team Name: TrustFall</h3>
                     <ul class="space-y-2">
-                        <!-- Add team members and roles here -->
-                        <li>[Name] - [Role]</li>
+                        <li>Sponsoring Organization: </li>
+                        <li>Coach: Jim Bondi</li>
+                        <li>Names & Roles:</li>
+                        <li>Sponsor Communication Lead: Anthony Tominello</li>
+                        <li>Project Manager: Ian Ouellette</li>
+                        <li>UI/UX designer: Michael Ackerman</li>
+                        <li>Backend Developer: Mohammed Alam</li>
+                        <li>Scrum Master: Donovan Jump</li>
+                        <li>Front End Developer: Colby Scarbrough</li>
+                        <li>Tester: Aidan Dalgarno-Platt</li>
                     </ul>
                 </div>
             </div>
@@ -104,27 +112,49 @@
             <h2 class="section-title text-2xl font-bold">Project Synopsis</h2>
             <div class="card p-6 rounded-lg mt-8">
                 <p class="leading-relaxed">
-                    [Your 250-word project synopsis goes here]
+                    The purpose of the project is to automate employer and student interactions during career fairs.
+                    This includes signing up for and signing into interviews. Employers will be able to create as many
+                    schedules as they need depending on how many interviewers they decide to bring to the interview day.
+                    After deciding which students they will interview, employers will be able to schedule the students
+                    on any of their schedules as long as the student is available during the chosen interview block.
+                    Each student will also have their own schedule which will let them view and check into interviews.
+                    When a student checks into an interview, the interviewer gets notified via a change in the status of
+                    the interview object on their schedule. The student’s schedule view will also help the student know
+                    where to go for their interview by including details such as the location where they will be
+                    interviewed.
                 </p>
             </div>
             <div class="card p-6 rounded-lg mt-8">
                 <h3 class="text-xl font-semibold mb-4">Keywords</h3>
                 <div class="flex flex-wrap gap-2">
                     <!-- Add your keywords here -->
-                    <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">[Keyword]</span>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Career Fair</span>
+                        <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Employment</span>
+                        <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Interviews</span>
+                        <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Recruitment</span>
+                        <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Job Search</span>
+                        <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Professional Development</span>
+                        <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Networking</span>
+                        <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Resume</span>
+                        <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Job Application</span>
+                        <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Career Development</span>
+                        <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Job Matching</span>
+                        <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Employer Relations</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Time Tracking -->
     <section id="tracking" class="py-12 px-6">
         <div class="container mx-auto">
             <h2 class="section-title text-2xl font-bold">Time Tracking</h2>
             <div class="card p-6 rounded-lg mt-8">
-                <!-- Replace the src with your Google Sheet embed URL -->
-                <iframe class="w-full h-[600px] border-0 rounded-lg"
-                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vStwOhq_A39ciQJ39MRuRS4rhrCMpikwE1DjZt70p7cCm3XMM-wXgb7pGR9xu9R2hfp2y9sJn_fxtqX/pubhtml?widget=true&amp;headers=false">
+                <iframe
+                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vStwOhq_A39ciQJ39MRuRS4rhrCMpikwE1DjZt70p7cCm3XMM-wXgb7pGR9xu9R2hfp2y9sJn_fxtqX/pubhtml?widget=true&amp;headers=false"
+                    style="width: 100%; height: 800px; border: none; overflow: auto;" frameborder="0" scrolling="yes"
+                    class="rounded-lg">
                 </iframe>
             </div>
         </div>
@@ -137,15 +167,82 @@
             <div class="grid md:grid-cols-3 gap-8 mt-8">
                 <div class="card p-6 rounded-lg">
                     <h3 class="text-xl font-semibold mb-4">Development Methodology</h3>
-                    <p>[Your development methodology content]</p>
+
+                    <div class="space-y-4">
+                        <p class="leading-relaxed">
+                            We will be developing using a kanban project management methodology. We believe that with
+                            our
+                            frequent meetings and structured progress assigned by RIT, we will be able to stay on pace
+                            to
+                            complete the project without using structured two week sprints, however we still want to use
+                            an
+                            agile methodology.
+                        </p>
+
+                        <div class="space-y-2">
+                            <h4 class="text-lg font-medium text-blue-400">Planned Activities and Artifacts</h4>
+                            <p class="leading-relaxed">
+                                As a team we plan on meeting twice a week in person. Once on Mondays with just our group
+                                members, and on Wednesdays with the sponsor and coach. Additionally, we have a discord
+                                as a
+                                quick online space to meet.
+                            </p>
+                            <p class="leading-relaxed">
+                                Artifacts will be assigned based on team roles, and members are free to commit code to
+                                their
+                                branches on their own time. However, before merging or committing actions on the senior
+                                project
+                                page, artifacts will be briefly reviewed by the team, or the project manager if on short
+                                notice.
+                            </p>
+                        </div>
+
+                        <div class="space-y-2">
+                            <h4 class="text-lg font-medium text-blue-400">Roles</h4>
+                            <p class="leading-relaxed">
+                                Tickets on our Jira board will be associated with roles within our group. User stories
+                                associated with the front page design would be given to front-end developer roles, for
+                                example.
+                            </p>
+                        </div>
+
+                        <div class="space-y-2">
+                            <h4 class="text-lg font-medium text-blue-400">Standards and Quality Practices</h4>
+                            <p class="leading-relaxed">
+                                We will have testing roles, and those developers will be expected to complete thorough
+                                unit
+                                testing.
+                            </p>
+                        </div>
+
+                        <div class="space-y-2">
+                            <h4 class="text-lg font-medium text-blue-400">Tools</h4>
+                            <p class="leading-relaxed">What tools will help with your chosen methodology?</p>
+                        </div>
+                    </div>
+
+
                 </div>
                 <div class="card p-6 rounded-lg">
-                    <h3 class="text-xl font-semibold mb-4">Product/Process Metrics</h3>
-                    <p>[Your metrics content]</p>
+                    <div class="space-y-2">
+                        <h4 class="text-lg font-medium text-blue-400">Product/Process Metrics</h4>
+                        <p class="leading-relaxed">
+                            Another element of the project plan that will affect and be affected
+                            by this one.
+                        </p>
+                        <p>
+                            We will be assigning story points to tasks and each week seeing how many points we
+                            accomplished.
+                        </p>
+                        <p>
+                            We will track this metric as our team’s velocity and our goal is to have a consistent or
+                            increasing velocity.
+                        </p>
+                    </div>
                 </div>
                 <div class="card p-6 rounded-lg">
                     <h3 class="text-xl font-semibold mb-4">Domain Model</h3>
-                    <p>[Your domain model content]</p>
+                    <p>Domain Model in Progress</p>
                 </div>
             </div>
         </div>
