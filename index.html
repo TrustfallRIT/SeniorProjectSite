@@ -8,54 +8,92 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary: #2563eb;
-            --secondary: #1e40af;
-            --accent: #60a5fa;
-            --background: #0f172a;
-            --text: #e2e8f0;
+            --primary: #F76902;
+            /* RIT Orange */
+            --secondary: #513127;
+            /* RIT Brown */
+            --accent: #F89C54;
+            /* Lighter Orange */
+            --background: #FFFFFF;
+            /* White */
+            --text: #333333;
+            /* Dark Gray */
+            --light-gray: #F2F2F2;
+            /* Light Gray for alternating sections */
+            --card-bg: #FFFFFF;
+            /* White */
+            --card-border: #E5E5E5;
+            /* Light Gray */
+            --card-hover: #F76902;
+            /* RIT Orange */
         }
 
         body {
             background-color: var(--background);
             color: var(--text);
-            font-family: 'Inter', sans-serif;
+            font-family: 'Arial', sans-serif;
         }
 
         .nav-link {
             color: var(--text);
             transition: color 0.3s;
+            font-weight: 500;
         }
 
         .nav-link:hover {
-            color: var(--accent);
+            color: var(--primary);
         }
 
         .card {
-            background: rgba(30, 41, 59, 0.7);
-            border: 1px solid rgba(96, 165, 250, 0.1);
-            backdrop-filter: blur(10px);
-            transition: transform 0.3s;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-color: var(--card-hover);
         }
 
         .section-title {
-            color: var(--accent);
-            border-bottom: 2px solid var(--accent);
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
             display: inline-block;
             margin-bottom: 1rem;
+        }
+
+        .highlight {
+            color: var(--primary);
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent);
+        }
+
+        .alt-section {
+            background-color: var(--light-gray);
+        }
+
+        footer {
+            background-color: var(--secondary);
         }
     </style>
 </head>
 
 <body>
     <!-- Navigation -->
-    <nav class="fixed w-full bg-opacity-90 bg-gray-900 shadow-lg z-50">
+    <nav class="fixed w-full bg-white shadow-md z-50 border-t-4" style="border-color: var(--primary);">
         <div class="container mx-auto px-6 py-3">
             <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold text-blue-400">Trust Fall</div>
+                <div class="text-2xl font-bold" style="color: var(--primary);">Trust Fall</div>
                 <div class="hidden md:flex space-x-8">
                     <a href="#team" class="nav-link">Team</a>
                     <a href="#project" class="nav-link">Project</a>
@@ -67,39 +105,46 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="pt-24 pb-12 px-6">
+    <header class="pt-24 pb-12 px-6 bg-white border-b">
         <div class="container mx-auto text-center">
-            <h1 class="text-5xl font-bold mb-4">Trust Fall</h1>
-            <p class="text-xl text-gray-400">Interview Candidates Efficiently</p>
+            <h1 class="text-5xl font-bold mb-4" style="color: var(--text);">Trust <span
+                    style="color: var(--primary);">Fall</span></h1>
+            <p class="text-xl text-gray-600">Interview Candidates Efficiently</p>
         </div>
     </header>
 
     <!-- Team Section -->
-    <section id="team" class="py-12 px-6">
+    <section id="team" class="py-12 px-6 alt-section">
         <div class="container mx-auto">
             <h2 class="section-title text-2xl font-bold">Team & Sponsorship</h2>
             <div class="grid md:grid-cols-2 gap-8 mt-8">
                 <div class="card p-6 rounded-lg">
-                    <h3 class="text-xl font-semibold mb-4">Project Details</h3>
-                    <ul class="space-y-2">
-                        <li><strong>Sponsoring Organization:</strong> RIT Co-Op Services</li>
-                        <li><strong>Coach:</strong> Dmitriy Lukyanov</li>
-                        <li><strong>Project Name:</strong> Interview Scheduler</li>
+                    <h3 class="text-xl font-semibold mb-4" style="color: var(--primary);">Project Details</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><strong class="highlight">Sponsoring Organization:</strong> RIT Co-Op Services</li>
+                        <li><strong class="highlight">Coach:</strong> Dmitriy Lukyanov</li>
+                        <li><strong class="highlight">Project Name:</strong> Interview Scheduler</li>
                     </ul>
                 </div>
                 <div class="card p-6 rounded-lg">
-                    <h3 class="text-xl font-semibold mb-4">Team Name: TrustFall</h3>
-                    <ul class="space-y-2">
-                        <li>Sponsoring Organization: </li>
-                        <li>Coach: Jim Bondi</li>
-                        <li>Names & Roles:</li>
-                        <li>Sponsor Communication Lead: Anthony Tominello</li>
-                        <li>Project Manager: Ian Ouellette</li>
-                        <li>UI/UX designer: Michael Ackerman</li>
-                        <li>Backend Developer: Mohammed Alam</li>
-                        <li>Scrum Master: Donovan Jump</li>
-                        <li>Front End Developer: Colby Scarbrough</li>
-                        <li>Tester: Aidan Dalgarno-Platt</li>
+                    <h3 class="text-xl font-semibold mb-4" style="color: var(--primary);">Team Name: TrustFall</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><strong class="highlight">Coach:</strong> Jim Bondi</li>
+                        <li><strong class="highlight">Names & Roles:</strong></li>
+                        <li class="ml-4">• <span class="text-gray-800 font-medium">Sponsor Communication Lead:</span>
+                            Anthony Tominello</li>
+                        <li class="ml-4">• <span class="text-gray-800 font-medium">Project Manager:</span> Ian Ouellette
+                        </li>
+                        <li class="ml-4">• <span class="text-gray-800 font-medium">UI/UX designer:</span> Michael
+                            Ackerman</li>
+                        <li class="ml-4">• <span class="text-gray-800 font-medium">Backend Developer:</span> Mohammed
+                            Alam</li>
+                        <li class="ml-4">• <span class="text-gray-800 font-medium">Scrum Master:</span> Donovan Jump
+                        </li>
+                        <li class="ml-4">• <span class="text-gray-800 font-medium">Front End Developer:</span> Colby
+                            Scarbrough</li>
+                        <li class="ml-4">• <span class="text-gray-800 font-medium">Tester:</span> Aidan Dalgarno-Platt
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -107,11 +152,11 @@
     </section>
 
     <!-- Project Synopsis -->
-    <section id="project" class="py-12 px-6 bg-gray-900">
+    <section id="project" class="py-12 px-6 bg-white">
         <div class="container mx-auto">
             <h2 class="section-title text-2xl font-bold">Project Synopsis</h2>
-            <div class="card p-6 rounded-lg mt-8">
-                <p class="leading-relaxed">
+            <div class="card p-6 rounded-lg mt-8 border">
+                <p class="leading-relaxed text-gray-700">
                     The purpose of the project is to automate employer and student interactions during career fairs.
                     This includes signing up for and signing into interviews. Employers will be able to create as many
                     schedules as they need depending on how many interviewers they decide to bring to the interview day.
@@ -119,37 +164,47 @@
                     on any of their schedules as long as the student is available during the chosen interview block.
                     Each student will also have their own schedule which will let them view and check into interviews.
                     When a student checks into an interview, the interviewer gets notified via a change in the status of
-                    the interview object on their schedule. The student’s schedule view will also help the student know
+                    the interview object on their schedule. The student's schedule view will also help the student know
                     where to go for their interview by including details such as the location where they will be
                     interviewed.
                 </p>
             </div>
-            <div class="card p-6 rounded-lg mt-8">
-                <h3 class="text-xl font-semibold mb-4">Keywords</h3>
+            <div class="card p-6 rounded-lg mt-8 border">
+                <h3 class="text-xl font-semibold mb-4" style="color: var(--primary);">Keywords</h3>
                 <div class="flex flex-wrap gap-2">
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Career Fair</span>
-                        <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Employment</span>
-                        <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Interviews</span>
-                        <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Recruitment</span>
-                        <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Job Search</span>
-                        <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Professional Development</span>
-                        <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Networking</span>
-                        <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Resume</span>
-                        <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Job Application</span>
-                        <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Career Development</span>
-                        <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Job Matching</span>
-                        <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Employer Relations</span>
-                    </div>
+                    <span class="px-3 py-1 rounded-full text-white text-sm"
+                        style="background-color: var(--primary);">Career Fair</span>
+                    <span class="px-3 py-1 rounded-full text-white text-sm"
+                        style="background-color: var(--primary);">Employment</span>
+                    <span class="px-3 py-1 rounded-full text-white text-sm"
+                        style="background-color: var(--primary);">Interviews</span>
+                    <span class="px-3 py-1 rounded-full text-white text-sm"
+                        style="background-color: var(--primary);">Recruitment</span>
+                    <span class="px-3 py-1 rounded-full text-white text-sm"
+                        style="background-color: var(--primary);">Job Search</span>
+                    <span class="px-3 py-1 rounded-full text-white text-sm"
+                        style="background-color: var(--primary);">Professional Development</span>
+                    <span class="px-3 py-1 rounded-full text-white text-sm"
+                        style="background-color: var(--primary);">Networking</span>
+                    <span class="px-3 py-1 rounded-full text-white text-sm"
+                        style="background-color: var(--primary);">Resume</span>
+                    <span class="px-3 py-1 rounded-full text-white text-sm"
+                        style="background-color: var(--primary);">Job Application</span>
+                    <span class="px-3 py-1 rounded-full text-white text-sm"
+                        style="background-color: var(--primary);">Career Development</span>
+                    <span class="px-3 py-1 rounded-full text-white text-sm"
+                        style="background-color: var(--primary);">Job Matching</span>
+                    <span class="px-3 py-1 rounded-full text-white text-sm"
+                        style="background-color: var(--primary);">Employer Relations</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="tracking" class="py-12 px-6">
+    <section id="tracking" class="py-12 px-6 alt-section">
         <div class="container mx-auto">
             <h2 class="section-title text-2xl font-bold">Time Tracking</h2>
-            <div class="card p-6 rounded-lg mt-8">
+            <div class="card p-6 rounded-lg mt-8 border">
                 <iframe
                     src="https://docs.google.com/spreadsheets/d/e/2PACX-1vStwOhq_A39ciQJ39MRuRS4rhrCMpikwE1DjZt70p7cCm3XMM-wXgb7pGR9xu9R2hfp2y9sJn_fxtqX/pubhtml?widget=true&amp;headers=false"
                     style="width: 100%; height: 800px; border: none; overflow: auto;" frameborder="0" scrolling="yes"
@@ -160,18 +215,18 @@
     </section>
 
     <!-- Artifacts -->
-    <section id="artifacts" class="py-12 px-6 bg-gray-900">
+    <section id="artifacts" class="py-12 px-6 bg-white">
         <div class="container mx-auto">
             <h2 class="section-title text-2xl font-bold">Project Artifacts</h2>
             <div class="grid md:grid-cols-2 gap-8 mt-8">
                 <!-- Top Left Quadrant -->
-                <div class="card p-6 rounded-lg space-y-6">
-                    <h3 class="text-xl font-semibold mb-4">Development Methodology</h3>
+                <div class="card p-6 rounded-lg space-y-6 border">
+                    <h3 class="text-xl font-semibold mb-4" style="color: var(--primary);">Development Methodology</h3>
 
                     <div class="space-y-4">
                         <div class="space-y-2">
-                            <h4 class="text-lg font-medium text-blue-400">Chosen Methodology</h4>
-                            <p class="leading-relaxed">
+                            <h4 class="text-lg font-medium" style="color: var(--primary);">Chosen Methodology</h4>
+                            <p class="leading-relaxed text-gray-700">
                                 Agile Kanban is the selected development methodology based on the project's schedule and
                                 organization.
                                 Time is limited to complete this project, and assigning tickets every 2 weeks in a
@@ -183,8 +238,8 @@
                         </div>
 
                         <div class="space-y-2">
-                            <h4 class="text-lg font-medium text-blue-400">Scheduled Meetings</h4>
-                            <p class="leading-relaxed">
+                            <h4 class="text-lg font-medium" style="color: var(--primary);">Scheduled Meetings</h4>
+                            <p class="leading-relaxed text-gray-700">
                                 Meetings with group members will be held each Monday at 1:00pm. These meetings will be
                                 used to review
                                 group member's work and prepare artifacts to be submitted to the coach/sponsor. There
@@ -196,17 +251,20 @@
                         </div>
 
                         <div class="space-y-2">
-                            <h4 class="text-lg font-medium text-blue-400">Planned Activities and Artifacts</h4>
-                            <p class="leading-relaxed">Development will follow a cyclical process.</p>
-                            <p class="leading-relaxed font-medium mt-2">Key phases:</p>
-                            <ul class="list-disc pl-6 space-y-2">
+                            <h4 class="text-lg font-medium" style="color: var(--primary);">Planned Activities and
+                                Artifacts</h4>
+                            <p class="leading-relaxed text-gray-700">Development will follow a cyclical process.</p>
+                            <p class="leading-relaxed font-medium mt-2 text-gray-800">Key phases:</p>
+                            <ul class="list-disc pl-6 space-y-2 text-gray-700">
                                 <li class="leading-relaxed">
-                                    <span class="font-medium">Planning:</span> Defining scope, requirements gathering,
+                                    <span class="font-medium highlight">Planning:</span> Defining scope, requirements
+                                    gathering,
                                     risk assessment.
                                     This will be done on Wednesdays after meeting with our sponsor.
                                 </li>
                                 <li class="leading-relaxed">
-                                    <span class="font-medium">Design and Implementation:</span> After our meeting on
+                                    <span class="font-medium highlight">Design and Implementation:</span> After our
+                                    meeting on
                                     Wednesday, team members
                                     will complete tickets over the course of the week, either alone or with people that
                                     are working on
@@ -215,7 +273,8 @@
                                     on between Wednesday and Monday.
                                 </li>
                                 <li class="leading-relaxed">
-                                    <span class="font-medium">Testing:</span> Team members will write testing for their
+                                    <span class="font-medium highlight">Testing:</span> Team members will write testing
+                                    for their
                                     code with easy to
                                     understand explanations of the tests. The tests will be performed and passed by a
                                     different member than
@@ -224,7 +283,8 @@
                                     sponsor meeting.
                                 </li>
                                 <li class="leading-relaxed">
-                                    <span class="font-medium">Deployment & Maintenance:</span> Merges and deployment
+                                    <span class="font-medium highlight">Deployment & Maintenance:</span> Merges and
+                                    deployment
                                     will be approved and
                                     managed by project lead Ian.
                                 </li>
@@ -232,10 +292,11 @@
                         </div>
 
                         <div class="space-y-2">
-                            <h4 class="text-lg font-medium text-blue-400">Tools</h4>
-                            <p class="leading-relaxed">We plan on using the Jira suite of tools in order to keep our
+                            <h4 class="text-lg font-medium" style="color: var(--primary);">Tools</h4>
+                            <p class="leading-relaxed text-gray-700">We plan on using the Jira suite of tools in order
+                                to keep our
                                 documentation organized:</p>
-                            <ul class="list-disc pl-6 space-y-1">
+                            <ul class="list-disc pl-6 space-y-1 text-gray-700">
                                 <li>GitHub pages: project website</li>
                                 <li>Google Drive: RIT course documents</li>
                                 <li>Confluence: project documentation</li>
@@ -244,8 +305,8 @@
                         </div>
 
                         <div class="space-y-2">
-                            <h4 class="text-lg font-medium text-blue-400">Team Roles</h4>
-                            <ul class="list-disc pl-6 space-y-1">
+                            <h4 class="text-lg font-medium" style="color: var(--primary);">Team Roles</h4>
+                            <ul class="list-disc pl-6 space-y-1 text-gray-700">
                                 <li>Sponsor Communication Lead: Anthony Tominello</li>
                                 <li>Project Manager: Ian Ouellette</li>
                                 <li>UI/UX designer: Michael Ackerman</li>
@@ -258,45 +319,55 @@
                     </div>
                 </div>
 
-                <div class="card p-6 rounded-lg space-y-6">
-                    <h3 class="text-xl font-semibold mb-4">Product/Process Metrics</h3>
+                <div class="card p-6 rounded-lg space-y-6 border">
+                    <h3 class="text-xl font-semibold mb-4" style="color: var(--primary);">Product/Process Metrics</h3>
                     <div class="space-y-4">
                         <div class="space-y-2">
-                            <h4 class="text-lg font-medium text-blue-400">Process Metric: Estimation Accuracy</h4>
-                            <p class="leading-relaxed"><span class="font-medium">Reason:</span> Since we are developing
+                            <h4 class="text-lg font-medium" style="color: var(--primary);">Process Metric: Estimation
+                                Accuracy</h4>
+                            <p class="leading-relaxed text-gray-700"><span class="font-medium highlight">Reason:</span>
+                                Since we are developing
                                 in a constrained time frame, tracking the accuracy of our time estimations for various
                                 tasks will help refine our team's planning and project management.</p>
-                            <p class="leading-relaxed"><span class="font-medium">Measurement:</span> Compare the
+                            <p class="leading-relaxed text-gray-700"><span
+                                    class="font-medium highlight">Measurement:</span> Compare the
                                 estimated time for completing development tasks (from sprint planning or senior project
                                 timelines) against the actual time spent (tracked through time logs).</p>
-                            <p class="leading-relaxed"><span class="font-medium">Goal:</span> Reduce the gap between
+                            <p class="leading-relaxed text-gray-700"><span class="font-medium highlight">Goal:</span>
+                                Reduce the gap between
                                 planned and actual effort to improve predictability and efficiency in future development
                                 cycles.</p>
                         </div>
 
                         <div class="space-y-2">
-                            <h4 class="text-lg font-medium text-blue-400">Product Metric: Number of Clicks Per Operation
+                            <h4 class="text-lg font-medium" style="color: var(--primary);">Product Metric: Number of
+                                Clicks Per Operation
                             </h4>
-                            <p class="leading-relaxed"><span class="font-medium">Reason:</span> A smooth interview
+                            <p class="leading-relaxed text-gray-700"><span class="font-medium highlight">Reason:</span>
+                                A smooth interview
                                 scheduling process is a critical concern of the project. Since usability was a concern
                                 for the current product, creating an intuitive website with few nested submenus is
                                 essential for letting employers and students communicate correctly.</p>
-                            <p class="leading-relaxed"><span class="font-medium">Measurement:</span> Record and analyze
+                            <p class="leading-relaxed text-gray-700"><span
+                                    class="font-medium highlight">Measurement:</span> Record and analyze
                                 the number of clicks it takes a user to successfully complete an action through the
                                 website UI. During UX testing, this will also include actual clicks (including incorrect
                                 clicks due to unintuitive design layout) as well as minimum clicks.</p>
-                            <p class="leading-relaxed"><span class="font-medium">Goal:</span> Reduce the number of
+                            <p class="leading-relaxed text-gray-700"><span class="font-medium highlight">Goal:</span>
+                                Reduce the number of
                                 clicks required to successfully complete website actions.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="card p-6 rounded-lg space-y-6">
-                    <h3 class="text-xl font-semibold mb-4">Major Deliverables and Milestones</h3>
+                <div class="card p-6 rounded-lg space-y-6 border">
+                    <h3 class="text-xl font-semibold mb-4" style="color: var(--primary);">Major Deliverables and
+                        Milestones</h3>
                     <div class="space-y-4">
                         <div class="space-y-2">
-                            <h4 class="text-lg font-medium text-blue-400">First Milestone - Project Setup</h4>
-                            <p class="leading-relaxed">
+                            <h4 class="text-lg font-medium" style="color: var(--primary);">First Milestone - Project
+                                Setup</h4>
+                            <p class="leading-relaxed text-gray-700">
                                 The first milestone will involve completing everything required for project deployment
                                 to the RIT server and the development environment set up locally on all team members'
                                 devices. This milestone will conclude when the project API and database is running
@@ -306,9 +377,10 @@
                         </div>
 
                         <div class="space-y-2">
-                            <h4 class="text-lg font-medium text-blue-400">Second Milestone - Initial Testing & Project
-                                Direction Determination</h4>
-                            <p class="leading-relaxed">
+                            <h4 class="text-lg font-medium" style="color: var(--primary);">Second Milestone - Initial
+                                Testing & Project
+                                Direction</h4>
+                            <p class="leading-relaxed text-gray-700">
                                 The second milestone will involve the development and implementation of initial unit
                                 tests, which will be run automatically by the CI/CD pipeline. It will also involve a
                                 finalization of the MVP and completion of the backlog. This milestone will conclude when
@@ -318,8 +390,9 @@
                         </div>
 
                         <div class="space-y-2">
-                            <h4 class="text-lg font-medium text-blue-400">Third Milestone - Frontend Overhaul</h4>
-                            <p class="leading-relaxed">
+                            <h4 class="text-lg font-medium" style="color: var(--primary);">Third Milestone - Frontend
+                                Overhaul</h4>
+                            <p class="leading-relaxed text-gray-700">
                                 The third milestone will conclude when the UI has been overhauled to have a consistent
                                 theme in line with RIT's branding and, most importantly, accessibility for mobile
                                 devices. A series of user tests will be conducted to ensure the UI is intuitive, and
@@ -330,9 +403,9 @@
                         </div>
 
                         <div class="space-y-2">
-                            <h4 class="text-lg font-medium text-blue-400">Fourth Milestone - Final Bug Fixes, System &
-                                Stress Testing</h4>
-                            <p class="leading-relaxed">
+                            <h4 class="text-lg font-medium" style="color: var(--primary);">Fourth Milestone - Final Bug
+                                Fixes & Testing</h4>
+                            <p class="leading-relaxed text-gray-700">
                                 The fourth milestone will conclude when criteria for the MVP has been reached, proven
                                 sufficiently by testing and approved by the sponsor. This milestone may also involve
                                 implementation of additional features not included in the MVP. It will also include a
@@ -342,17 +415,20 @@
                     </div>
                 </div>
 
-                <div class="card p-6 rounded-lg">
-                    <h3 class="text-xl font-semibold mb-4">Domain Model</h3>
-                    <img src="domain-model.png" alt="Image of our domain model">
+                <div class="card p-6 rounded-lg border">
+                    <h3 class="text-xl font-semibold mb-4" style="color: var(--primary);">Domain Model</h3>
+                    <div class="bg-white p-4 rounded-lg border">
+                        <img src="domain-model.png" alt="Image of our domain model" class="w-full h-auto">
+                    </div>
                 </div>
 
-                <div class="card p-6 rounded-lg space-y-6">
-                    <h3 class="text-xl font-semibold mb-4">Stakeholder Management Communication</h3>
+                <div class="card p-6 rounded-lg space-y-6 border">
+                    <h3 class="text-xl font-semibold mb-4" style="color: var(--primary);">Stakeholder Management
+                        Communication</h3>
                     <div class="space-y-4">
                         <div class="space-y-2">
-                            <h4 class="text-lg font-medium text-blue-400">Meetings</h4>
-                            <p class="leading-relaxed">
+                            <h4 class="text-lg font-medium" style="color: var(--primary);">Meetings</h4>
+                            <p class="leading-relaxed text-gray-700">
                                 Meetings with the project sponsor will be held weekly to give updates on our progress,
                                 show and get feedback on implemented features, address blockers, and describe the plan
                                 for the coming week and beyond. Between these meetings, communication with the sponsor
@@ -364,8 +440,8 @@
                         </div>
 
                         <div class="space-y-2">
-                            <h4 class="text-lg font-medium text-blue-400">Scope & Features</h4>
-                            <p class="leading-relaxed">
+                            <h4 class="text-lg font-medium" style="color: var(--primary);">Scope & Features</h4>
+                            <p class="leading-relaxed text-gray-700">
                                 Via user stories, the team will have a concrete outline of the MVP, which will be the
                                 central focus until it is complete. If needed, the MVP can be adjusted during the weekly
                                 sponsor meetings in light of unexpected bugs or unpredicted necessary features. In
@@ -383,9 +459,12 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-6 px-6 bg-gray-900">
-        <div class="container mx-auto text-center text-gray-400">
-            <p>&copy; 2025 Trust Fall Senior Project. All rights reserved.</p>
+    <footer class="py-6 px-6">
+        <div class="container mx-auto text-center">
+            <div class="pb-4">
+                <div class="h-1 w-32 mx-auto" style="background-color: var(--primary);"></div>
+            </div>
+            <p class="text-white">&copy; 2025 Trust Fall Senior Project. All rights reserved.</p>
         </div>
     </footer>
 </body>
